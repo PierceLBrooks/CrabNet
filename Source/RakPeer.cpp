@@ -3483,7 +3483,7 @@ void RakPeer::ParseConnectionRequestPacket(RakPeer::RemoteSystemStruct *remoteSy
 
     unsigned char *password = bs.GetData() + BITS_TO_BYTES(bs.GetReadOffset());
     int passwordLength = byteSize - BITS_TO_BYTES(bs.GetReadOffset());
-    if (incomingPasswordLength != passwordLength || memcmp(password, incomingPassword, incomingPasswordLength) != 0)
+    //if (incomingPasswordLength != passwordLength || memcmp(password, incomingPassword, incomingPasswordLength) != 0)
     {
         CAT_AUDIT_PRINTF("AUDIT: Invalid password\n");
         // This one we only send once since we don't care if it arrives.
